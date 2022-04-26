@@ -1,0 +1,19 @@
+.layout {
+    height: 100vh;
+    padding: 10vh;
+}
+
+.content {
+    background-color: white;
+    padding: 3vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.icon {
+    font-size: 4rem;
+    color: blue
+}

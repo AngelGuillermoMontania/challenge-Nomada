@@ -5,7 +5,7 @@ import Result from "./Components/Result/Result";
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Routes>
                 <Route path="/" element={<Search />} />
                 <Route path="/result" element={<Result />} />
