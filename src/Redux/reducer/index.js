@@ -1,15 +1,20 @@
 const initialState = {
-    nameFamous: ""
+    actorName: "",
+    actorDetail: []
 };
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "LOAD_FAMOUS":
+        case "LOAD_ACTOR_NAME":
             return ({
-                ...initialState,
-                nameFamous: action.payload
+                ...state,
+                actorName: action.payload
             })
-            break
+        case "DETAIL_ACTOR": 
+            return ({
+                ...state,
+                actorDetail: action.payload
+            });
         default:
             return {
                 ...state,

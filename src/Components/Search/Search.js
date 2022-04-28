@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { loadFamous } from '../../Redux/actions';
+import { loadActorName } from '../../Redux/actions';
 import styles from "./Search.module.css"
 import { AiOutlineFolderOpen } from "react-icons/ai";
 import { Upload, message, Typography, Layout} from 'antd';
@@ -35,8 +35,8 @@ export default function Search() {
                 console.log(info.file, info.fileList);
             }
             if (status === 'done') {
+                dispatch(loadActorName(info.file))
                 message.success(`${info.file.name} file uploaded successfully.`);
-                dispatch(loadFamous(info.file))
                 navigate("/result")
             } else if (status === 'error') {
                 message.error(`${info.file.name} file upload failed.`);

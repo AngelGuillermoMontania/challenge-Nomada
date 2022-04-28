@@ -1,0 +1,62 @@
+.layout {
+    padding: 10vh;
+    background-color: #00000020;
+}
+
+.content {
+    background-color: white;
+    padding: 3vh;
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+
+.img {
+    width: 100%;
+}
+
+.modal {
+    text-align: center;
+}
+
+.sider {
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.gender {
+    display: block;
+    margin: auto
+}
+
+.popularity {
+    display: block;
+    text-transform: capitalize;
+}
+
+.description {
+    padding: 1rem;
+}
+
+.detailMovie {
+    display: flex;
+}
+
+.imgPoster {
+    width: 10%;
+    height: 10vw;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.containOverview {
+    padding: 0 0.3rem;
+}
+
+.overview {
+    display: block;
+}
