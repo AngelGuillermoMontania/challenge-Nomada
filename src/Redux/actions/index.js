@@ -1,19 +1,19 @@
-import axios from "axios"
-const apiKeyTMDB = process.env.REACT_APP_KEY_TMDB
+import axios from "axios";
+const apiKeyTMDB = process.env.REACT_APP_KEY_TMDB;
 
 export function loadActorName(data) {
     return ({
         type: 'LOAD_ACTOR_NAME',
         payload: data.response.actorName
     })
-}
+};
 
 export function loadActorDetail(name) {
     if(name === "clean") {
         return({
             type: "DETAIL_ACTOR",
             payload: []
-        })
+        });
     } else {
         return async (dispatch) => {
             try {
@@ -26,5 +26,5 @@ export function loadActorDetail(name) {
                 console.log(error.message)
             }
         }
-    }
-}
+    };
+};

@@ -1,49 +1,48 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { loadActorName } from '../../Redux/actions';
-import styles from "./Search.module.css"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loadActorName } from "../../Redux/actions";
+import styles from "./Search.module.css";
 import { AiOutlineFolderOpen } from "react-icons/ai";
-import { Upload, message, Typography, Layout} from 'antd';
+import { Upload, message, Typography, Layout} from "antd";
 const { Dragger } = Upload;
 const { Title } = Typography;
-const { Content } = Layout
-const apiKeyNomada = process.env.REACT_APP_WHOIS;
-
+const { Content } = Layout;
+const apiKeyNomada = process.env.REACT_APP_KEY_WHOIS;
 
 export default function Search() {
 
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     
     const props = {
-        name: 'file',
-        action: 'https://whois.nomada.cloud/upload',
+        name: "file",
+        action: "https://whois.nomada.cloud/upload",
         headers: {
             Nomada: apiKeyNomada,
         },
         beforeUpload: file => {
-            const isPNGorJPG = file.type === 'image/png' || file.type === 'image/jpeg';
+            const isPNGorJPG = file.type === "image/png" || file.type === "image/jpeg";
             if (!isPNGorJPG) {
                 message.error(`${file.name} is not a png, jpg or jpeg file`);
-            }
+            };
             return isPNGorJPG || Upload.LIST_IGNORE;
         },
         onChange(info) {
             const { status } = info.file;
-            if (status !== 'uploading') {
+            if (status !== "uploading") {
                 console.log(info.file, info.fileList);
-            }
-            if (status === 'done') {
-                dispatch(loadActorName(info.file))
+            };
+            if (status === "done") {
+                dispatch(loadActorName(info.file));
                 message.success(`${info.file.name} file uploaded successfully.`);
-                navigate("/result")
-            } else if (status === 'error') {
+                navigate("/result");
+            } else if (status === "error") {
                 message.error(`${info.file.name} file upload failed.`);
-            }
+            };
         },
         onDrop(e) {
-            console.log('Dropped files', e.dataTransfer.files);
+            console.log("Dropped files", e.dataTransfer.files);
         },
     };
 

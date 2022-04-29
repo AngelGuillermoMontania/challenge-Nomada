@@ -1,0 +1,21 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailMovie {
+    display: flex;
+}
+
+.imgPoster {
+    width: 10%;
+    height: 10vw;
+}
+
+.containOverview {
+    padding: 0 0.3rem;
+}
+
+.containOverview .overview {
+    display: block;
+}

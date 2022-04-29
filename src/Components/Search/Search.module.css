@@ -4,17 +4,21 @@
     background-color: #00000020;
 }
 
-.content {
+.layout .content {
     background-color: white;
     padding: 3vh;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
-.icon {
+.layout .content .icon {
     font-size: 4rem;
     color: blue
+}
+
+.layout .content .textSelect {
+    padding: 0 2rem;
 }

@@ -3,60 +3,68 @@
     background-color: #00000020;
 }
 
-.content {
+.layout .content {
     background-color: white;
     padding: 3vh;
     display: flex;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     flex-direction: column;
 }
 
-.img {
-    width: 100%;
+.layout .content .buttonBack {
+    margin: 0.5rem 0;
 }
 
-.modal {
+.layout .content .modal {
     text-align: center;
 }
 
-.sider {
+.layout .content .modal .detailModal:hover {
+    cursor: pointer;
+}
+
+.layout .content .sider {
     padding: 1rem;
     text-align: center;
     align-items: center;
 }
 
-.gender {
+.layout .content .sider .img {
+    width: 100%;
+}
+
+.layout .content .sider .gender {
     display: block;
     margin: auto
 }
 
-.popularity {
+.layout .content .sider .popularity {
     display: block;
     text-transform: capitalize;
 }
 
-.description {
+.layout .content .description {
     padding: 1rem;
 }
 
-.detailMovie {
-    display: flex;
-}
-
-.imgPoster {
-    width: 10%;
-    height: 10vw;
-}
-
-.title {
+.layout .content .description .title {
     display: flex;
     justify-content: space-between;
 }
 
-.containOverview {
+.layout .content .description .detailMovie {
+    display: flex;
+}
+
+.layout .content .description .imgPoster {
+    width: 10%;
+    height: 10vw;
+}
+
+.layout .content .description .containOverview {
     padding: 0 0.3rem;
 }
 
-.overview {
+.layout .content .description .containOverview .overview {
     display: block;
 }
